@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/topLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:keepScreenOn="true">
+
+    <com.riseapp.test.camera.CameraSourcePreview
+        android:id="@+id/preview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/hint"
+        android:layout_marginBottom="30sp">
+
+        <com.riseapp.test.camera.GraphicOverlay
+            android:id="@+id/graphicOverlay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </com.riseapp.test.camera.CameraSourcePreview>
+    <TextView
+        android:id="@+id/hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hint"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:textAlignment="center"
+        android:textSize="17sp"
+        android:fontFamily="sans-serif-light"
+        android:textStyle="bold"
+        />
+    <View
+        android:layout_width="0sp"
+        android:layout_height="0sp"
+        android:layout_alignBottom="@+id/preview"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/hint"
+        android:id="@+id/v"
+        />
+    <Button
+        android:background="@drawable/submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GO"
+        android:textColor="#ffffff"
+        android:layout_alignEnd="@+id/v"
+        android:layout_alignRight="@+id/v"
+        android:layout_alignBottom="@+id/v"
+        android:layout_margin="10sp"
+        android:id="@+id/submit"/>
+    <Button
+        android:background="@drawable/submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rotate"
+        android:textColor="#ffffff"
+        android:layout_alignStart="@+id/v"
+        android:layout_alignLeft="@+id/v"
+        android:layout_alignBottom="@+id/v"
+        android:layout_margin="10sp"
+        android:id="@+id/rotate"/>
+</RelativeLayout>
